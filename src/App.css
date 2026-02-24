@@ -1,42 +1,182 @@
-#root {
-  max-width: 1280px;
+/* LAB-2 Accessibility & Basic Layout Styles */
+
+/* Genel sifirlama */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body { 
+  font-family: system-ui, -apple-system, sans-serif; 
+  line-height: 1.6; 
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.app-container {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Skip link: normalde gizli, Tab ile gorunur */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: #1E3A8A;
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skip-link:focus { 
+  top: 0; 
+}
+
+/* Focus gostergesi -- ASLA kaldirma */
+:focus { 
+  outline: 3px solid #2563EB; 
+  outline-offset: 2px; 
+}
+
+header {
+  margin-bottom: 40px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1E3A8A;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+section {
+  padding: 40px 0;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+h3 {
+  margin: 15px 0 10px;
+  color: #34495e;
+}
+
+figure {
+  margin: 20px 0;
+}
+
+img {
+  max-width: 150px;
+  border-radius: 50%;
+  border: 4px solid #eee;
+}
+
+figcaption {
+  font-style: italic;
+  color: #666;
+  margin-top: 8px;
+}
+
+.project-card {
+  background: #fcfcfc;
+  border: 1px solid #eee;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+/* Form stilleri */
+form {
+  margin-top: 20px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.form-group { 
+  margin-bottom: 1.5rem; 
+}
+
+label { 
+  display: block; 
+  margin-bottom: 0.5rem; 
+  font-weight: 500;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: #e74c3c;
+}
+
+button {
+  background-color: #1E3A8A;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #152a63;
+}
+
+.error-msg { 
+  color: #e74c3c; 
+  font-size: 0.85rem; 
+  margin-top: 5px;
+  display: block;
+}
+
+footer {
+  margin-top: 40px;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
+  font-size: 0.9rem;
   color: #888;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
 }
