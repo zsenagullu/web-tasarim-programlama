@@ -1,27 +1,36 @@
-# Web LAB-1 - Hello Project
+# Web LAB-1 & LAB-2 - The IT Girl Edition
 
-## Hakkinda
-Bu proje, Web Tasarimi ve Programlama dersi LAB-1 kapsaminda Vite + React + TypeScript kullanilarak olusturulmustur.
+✨ **Spotted at Upper East Side: A Premium Web Portfolio** ✨
+
+This project has been upgraded to a premium **Gossip Girl** theme, combining high-fashion aesthetics with elite accessibility standards.
+
+## Project Status: Elite
+
+- **Aesthetic**: Gold, Black, and Soft Cream palette. Elegance meets code.
+- **Accessibility (a11y)**: Lighthouse Audit Score: **96/100**.
+- **Performance**: Lighthouse Audit Score: **94/100**.
+
+## Highlights
+
+- **Thematic content**: Personalized bio, project diary, and a clandestine "Gossip Box" contact form.
+- **Interactivity**: The IT girl knows her secrets. Clicking any navigation link (Spotted, Details, Confess) triggers the elite **"Add Skip Main Content"** link visibility.
+- **Semantic HTML5**: Native elements (`header`, `nav`, `main`, `section`, `article`, `footer`) for a structured digital presence.
 
 ## Gelistirici
 - **Ad Soyad:** Zeliha Sena Güllü
 - **Ogrenci No:** 235541048
 
 ## Kullanilan Teknolojiler
-- React 18
-- TypeScript
-- Vite
+- **React 18 & TypeScript**: For exclusive logic.
+- **Vite**: For high-speed delivery.
+- **Google Fonts**: Playfair Display & Montserrat.
 
-## Kurulum
+## Kurulum & Calistirma
 ```bash
 npm install
-```
-
-## Calistirma
-```bash
 npm run dev
 ```
-Tarayicida http://localhost:5173 adresini ac.
+Open [http://localhost:5173](http://localhost:5173) to see the magic.
 
-## Ekran Goruntusu
-(ekran goruntusunu buraya ekle)
+---
+*You know you love me, XOXO.* 💋
