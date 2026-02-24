@@ -1,16 +1,30 @@
+import { useState } from 'react'
 import './App.css'
 
 function App() {
+  const [clickedNavs, setClickedNavs] = useState(new Set())
+  const showSkip = clickedNavs.size >= 1 // Any of the 3 buttons trigger it
+
+  const handleNavClick = (name: string) => {
+    setClickedNavs(prev => new Set(prev).add(name))
+  }
+
   return (
     <div className="app-container">
-      <a href="#main-content" className="skip-link">Skip to Content</a>
+      {showSkip ? (
+        <a href="#main-content" className="skip-link-visible">
+          Add Skip Main Content
+        </a>
+      ) : (
+        <a href="#main-content" className="skip-link">Skip to Content</a>
+      )}
 
       <header>
         <nav aria-label="Ana navigasyon">
           <ul>
-            <li><a href="#hakkimda">Spotted</a></li>
-            <li><a href="#projeler">Details</a></li>
-            <li><a href="#iletisim">Confess</a></li>
+            <li><a href="#hakkimda" onClick={() => handleNavClick('spotted')}>Spotted</a></li>
+            <li><a href="#projeler" onClick={() => handleNavClick('details')}>Details</a></li>
+            <li><a href="#iletisim" onClick={() => handleNavClick('confess')}>Confess</a></li>
           </ul>
         </nav>
       </header>
@@ -20,13 +34,6 @@ function App() {
 
         <section id="hakkimda">
           <div className="hakkimda-content">
-            <figure>
-              <img
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200"
-                alt="Zeliha Sena Güllü'nün premium portresi"
-              />
-              <figcaption>The IT Girl of Web Design</figcaption>
-            </figure>
             <div className="bio">
               <h2>About The Queen</h2>
               <p>
@@ -62,7 +69,7 @@ function App() {
 
         <section id="iletisim">
           <h2>Send a Tip</h2>
-          <form action="#" method="POST" novalidate>
+          <form action="#" method="POST" noValidate>
             <fieldset>
               <legend>Gossip Box</legend>
 
