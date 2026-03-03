@@ -2,10 +2,11 @@ import './App.css'
 
 function App() {
   return (
-    <div className="app-container">
+    <>
       <a href="#main-content" className="skip-link">Ana icerige atla</a>
 
       <header>
+        <div className="site-title">Zeliha Sena Güllü</div>
         <nav aria-label="Ana navigasyon">
           <ul>
             <li><a href="#hakkimda">Hakkimda</a></li>
@@ -16,51 +17,72 @@ function App() {
       </header>
 
       <main id="main-content">
-        <h1>Zeliha Sena Güllü - Kisisel Portfolyo</h1>
-
         <section id="hakkimda">
           <h2>Hakkimda</h2>
-          <figure>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Zeliha Sena Güllü'nün vesikalik fotografi"
-            />
-            <figcaption>Zeliha Sena Güllü</figcaption>
-          </figure>
-          <p>
-            Merhaba! Ben Zeliha Sena Güllü. Web Tasarımı ve Programlama dersi kapsamında
-            modern web teknolojilerini öğreniyorum. Bilgisayar Mühendisliği öğrencisiyim.
-          </p>
-          <p>Ögrenci No: 235541048</p>
-          <h3>Kullandigim Teknolojiler</h3>
-          <ul>
-            <li>HTML5 & CSS3</li>
-            <li>React & TypeScript</li>
-            <li>Git & GitHub</li>
-          </ul>
+          <div className="about-content">
+            <figure>
+              <img
+                src="https://via.placeholder.com/150"
+                alt="Zeliha Sena Güllü'nün vesikalik fotografi"
+              />
+              <figcaption>Zeliha Sena Güllü</figcaption>
+            </figure>
+            <div>
+              <p>
+                Merhaba! Ben Zeliha Sena Güllü. Web Tasarımı ve Programlama dersi kapsamında
+                modern web teknolojilerini öğreniyorum. Bilgisayar Mühendisliği öğrencisiyim.
+              </p>
+              <p>Ögrenci No: 235541048</p>
+              <h3>Kullandigim Teknolojiler</h3>
+              <ul className="skill-tags" role="list" aria-label="Beceri etiketleri">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Git</li>
+              </ul>
+            </div>
+          </div>
         </section>
-
-        <hr />
 
         <section id="projeler">
           <h2>Projelerim</h2>
-          <article className="project-card">
-            <h3>E-Ticaret Sitesi</h3>
-            <p>React ve TypeScript kullanılarak geliştirilmiş bir alışveriş platformu.</p>
-            <p><strong>Teknolojiler:</strong> React, CSS Modules</p>
-          </article>
-          <article className="project-card">
-            <h3>Blog Uygulamasi</h3>
-            <p>Kullanıcıların içerik paylaşabildiği dinamik bir blog sitesi.</p>
-            <p><strong>Teknolojiler:</strong> Node.js, Express, MongoDB</p>
-          </article>
+          <div className="project-grid">
+            <article className="project-card">
+              <img src="https://via.placeholder.com/300x200" alt="E-Ticaret Sitesi ekran goruntusu" />
+              <h3>E-Ticaret Sitesi</h3>
+              <p>React ve TypeScript kullanılarak geliştirilmiş bir alışveriş platformu.</p>
+              <ul className="skill-tags">
+                <li>React</li>
+                <li>CSS Modules</li>
+              </ul>
+            </article>
+            <article className="project-card">
+              <img src="https://via.placeholder.com/300x200" alt="Blog Uygulamasi ekran goruntusu" />
+              <h3>Blog Uygulamasi</h3>
+              <p>Kullanıcıların içerik paylaşabildiği dinamik bir blog sitesi.</p>
+              <ul className="skill-tags">
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+              </ul>
+            </article>
+            <article className="project-card">
+              <img src="https://via.placeholder.com/300x200" alt="Hava Durumu Uygulamasi ekran goruntusu" />
+              <h3>Hava Durumu</h3>
+              <p>OpenWeather API ile anlık hava durumu bilgisi.</p>
+              <ul className="skill-tags">
+                <li>JavaScript</li>
+                <li>API</li>
+              </ul>
+            </article>
+          </div>
         </section>
-
-        <hr />
 
         <section id="iletisim">
           <h2>Iletisim</h2>
-          <form action="#" method="POST" novalidate>
+          <form action="#" method="POST" noValidate>
             <fieldset>
               <legend>Iletisim Formu</legend>
 
@@ -122,7 +144,7 @@ function App() {
       <footer>
         <p>&copy; 2025 Zeliha Sena Güllü. Tum haklari saklidir.</p>
       </footer>
-    </div>
+    </>
   )
 }
 
