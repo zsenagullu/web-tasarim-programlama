@@ -13,10 +13,10 @@ export default function Button({
   const base = `inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2`;
 
   const variants = {
-    primary: `bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 dark:bg-blue-500 dark:hover:bg-blue-400`,
-    secondary: `bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600`,
+    primary: `bg-primary text-accent hover:bg-yellow-500 focus:ring-primary dark:bg-primary dark:hover:bg-yellow-400`,
+    secondary: `bg-secondary text-white hover:bg-red-900 focus:ring-secondary dark:bg-secondary dark:hover:bg-red-800`,
     danger: `bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 dark:bg-red-500 dark:hover:bg-red-400`,
-    ghost: `bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-400 dark:text-gray-300 dark:hover:bg-gray-800`,
+    ghost: `bg-transparent text-accent hover:bg-primary/10 focus:ring-primary dark:text-surface dark:hover:bg-surface/10`,
   };
 
   const sizes = {

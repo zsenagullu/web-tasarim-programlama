@@ -16,9 +16,9 @@ export default function Card({
   variant?: "elevated" | "outlined" | "filled";
 }) {
   const variants = {
-    elevated: `bg-white dark:bg-gray-800 shadow-md hover:shadow-lg`,
-    outlined: `bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700`,
-    filled: `bg-gray-100 dark:bg-gray-800`,
+    elevated: `bg-white/60 dark:bg-accent/60 backdrop-blur-md shadow-lg hover:shadow-xl border border-primary/20 hover:border-primary transition-all`,
+    outlined: `bg-transparent border border-primary/40 dark:border-primary/40 hover:border-primary transition-all`,
+    filled: `bg-surface dark:bg-accent border border-primary/10`,
   };
 
   return (
@@ -26,18 +26,18 @@ export default function Card({
       {image && (
         <img src={image} alt={imageAlt || ""} className="w-full h-48 object-cover" />
       )}
-      <div className="p-5">
+      <div className="p-8">
         {title && (
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+          <h3 className="text-xl font-bold font-serif italic text-accent dark:text-primary mb-4">
             {title}
           </h3>
         )}
-        <div className="text-gray-600 dark:text-gray-400">
+        <div className="text-accent/80 dark:text-surface/80 leading-relaxed font-light">
           {children}
         </div>
       </div>
       {footer && (
-        <div className="px-5 py-3 bg-gray-50 dark:bg-gray-900 border-t border-gray-100 dark:border-gray-700">
+        <div className="px-8 py-4 bg-transparent border-t border-primary/20">
           {footer}
         </div>
       )}

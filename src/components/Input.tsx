@@ -17,21 +17,21 @@ export default function Input({
   return (
     <div className="space-y-1">
       {label && (
-        <label htmlFor={id} className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label htmlFor={id} className="block text-xs font-bold uppercase tracking-widest text-accent dark:text-surface">
           {label}
         </label>
       )}
       <input
         id={id}
         type={type}
-        className={`w-full px-3 py-2 rounded-lg border transition-colors focus:outline-none focus:ring-2 dark:bg-gray-800 dark:text-gray-100 ${
+        className={`w-full px-4 py-3 border transition-colors focus:outline-none focus:ring-1 dark:bg-transparent dark:text-surface ${
           error
             ? "border-red-500 focus:ring-red-500"
-            : "border-gray-300 focus:ring-blue-500"
+            : "border-accent/20 dark:border-surface/20 focus:border-primary focus:ring-primary"
         } ${
           props.disabled
-            ? "bg-gray-100 cursor-not-allowed"
-            : "bg-white dark:bg-gray-800"
+            ? "bg-gray-100 cursor-not-allowed opacity-50"
+            : "bg-surface/50 dark:bg-transparent"
         } ${props.className || ''}`}
         aria-describedby={
           error ? `${id}-error` : helpText ? `${id}-help` : undefined
